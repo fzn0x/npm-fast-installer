@@ -1,7 +1,7 @@
 {
   "name": "npm-fast-installer",
-  "version": "0.0.2",
-  "description": "npm install configuration in top of YAML for fast npm install usage.",
+  "version": "0.0.3",
+  "description": "NPM install configuration in top of YAML for fast NPM install usage.",
   "bin": {
     "npm-fast-installer": "./bin/npm-fast-installer"
   },
