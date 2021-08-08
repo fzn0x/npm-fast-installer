@@ -1,0 +1,11 @@
+dependencies:
+  express: "latest"
+  express-fileupload: "latest"
+  express-session: "latest"
+  compression: "latest"
+  cors: "latest"
+  "helmet": "latest"
+  "morgan": "latest"
+  "body-parser": "latest"
+devDependencies:
+global:
