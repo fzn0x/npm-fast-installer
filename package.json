@@ -1,0 +1,17 @@
+{
+  "name": "npm-fast-installer",
+  "version": "0.0.1",
+  "description": "npm install configuration in top of YAML for fast npm install usage.",
+  "main": "index.js",
+  "author": "fncolon",
+  "license": "MIT",
+  "dependencies": {
+    "joi": "^17.4.2",
+    "js-yaml": "^4.1.0",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fncolon/npm-fast-installer.git"
+  }
+}
