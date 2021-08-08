@@ -1,13 +1,5 @@
 # Changelog
 
-## [Unreleased](https://github.com/fncolon/npm-fast-installer/tree/HEAD)
-
-[Full Changelog](https://github.com/fncolon/npm-fast-installer/compare/0.0.3...HEAD)
-
-**Fixed bugs:**
-
-- npm-fast-installer init not working with npx [\#1](https://github.com/fncolon/npm-fast-installer/issues/1)
-
 ## [0.0.3](https://github.com/fncolon/npm-fast-installer/tree/0.0.3) (2021-08-08)
 
 [Full Changelog](https://github.com/fncolon/npm-fast-installer/compare/0.0.2...0.0.3)
