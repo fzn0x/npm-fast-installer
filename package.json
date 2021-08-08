@@ -2,7 +2,9 @@
   "name": "npm-fast-installer",
   "version": "0.0.1",
   "description": "npm install configuration in top of YAML for fast npm install usage.",
-  "main": "index.js",
+  "bin": {
+    "npm-fast-installer": "./bin/npm-fast-installer"
+  },
   "author": "fncolon",
   "license": "MIT",
   "dependencies": {
