@@ -47,6 +47,18 @@ const npmInstall = () => {
       virtualConsole.log(".", true);
     }, 500);
 
+    try {
+      await access(process.cwd(), fs.constants.R_OK | constants.W_OK);
+    } catch (e) {
+      console.error(
+        "\u001b[91m",
+        "fncolon/npm-fast-installer - cannot access file directory",
+        "\u001b[49m"
+      );
+      console.error("\u001b[91m", e, "\u001b[49m");
+      process.exit(1);
+    }
+
     for (dependency in values) {
       if (
         dependency.toString().toLowerCase() == "dependencies" &&
