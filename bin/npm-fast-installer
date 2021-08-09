@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
 const yaml = require("js-yaml");
+const { promisify } = require("util");
 const fs = require("fs");
+// access
+const access = promisify(fs.access);
+const spawn = require("cross-spawn");
 
 const schema = require("../lib/schema");
 const initFile = require("../lib/init-file");
@@ -13,6 +17,13 @@ const {
 const virtualConsole = require("../lib/virtual-console");
 
 const args = process.argv;
+
+// FIX: not found files in .staging folder.
+const npmInstall = () => {
+  spawn(COMMAND, getArguments(), {
+    stdio: "inherit",
+  });
+};
 
 // Get npm-fast-installer configuration, or throw exception on error
 (async () => {
@@ -33,8 +44,20 @@ const args = process.argv;
     virtualConsole.log("fncolon/npm-fast-installer - installing dependencies");
 
     const loadIndicatorInterval = setInterval(function () {
-      virtualConsole.log(".", true); // <- Append.
-    }, 1000);
+      virtualConsole.log(".", true);
+    }, 500);
+
+    try {
+      await access(process.cwd(), fs.constants.R_OK | fs.constants.W_OK);
+    } catch (e) {
+      console.error(
+        "\u001b[91m",
+        "fncolon/npm-fast-installer - cannot access file directory",
+        "\u001b[49m"
+      );
+      console.error("\u001b[91m", e, "\u001b[49m");
+      process.exit(1);
+    }
 
     for (dependency in values) {
       if (
@@ -59,6 +82,6 @@ const args = process.argv;
       clearInterval(loadIndicatorInterval);
     }, 2000);
   } catch (e) {
-    console.error("\u001b[91m", e);
+    console.error("\u001b[91m", e, "\u001b[49m");
   }
 })();
