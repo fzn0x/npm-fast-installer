@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.4](https://github.com/fncolon/npm-fast-installer/tree/0.0.4) (2021-08-09)
+
+[Full Changelog](https://github.com/fncolon/npm-fast-installer/compare/0.0.3...0.0.4)
+
+**Fixed bugs:**
+
+- npm-fast-installer init not working with npx [\#1](https://github.com/fncolon/npm-fast-installer/issues/1)
+
+**Merged pull requests:**
+
+- fix\(install\): Core Bug: WriteFile Permission \#2 [\#3](https://github.com/fncolon/npm-fast-installer/pull/3) ([fncolon](https://github.com/fncolon))
+
 ## [0.0.3](https://github.com/fncolon/npm-fast-installer/tree/0.0.3) (2021-08-08)
 
 [Full Changelog](https://github.com/fncolon/npm-fast-installer/compare/0.0.2...0.0.3)
