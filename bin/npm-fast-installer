@@ -48,7 +48,7 @@ const npmInstall = () => {
     }, 500);
 
     try {
-      await access(process.cwd(), fs.constants.R_OK | constants.W_OK);
+      await access(process.cwd(), fs.constants.R_OK | fs.constants.W_OK);
     } catch (e) {
       console.error(
         "\u001b[91m",
